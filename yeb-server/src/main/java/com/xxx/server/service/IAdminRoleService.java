@@ -2,6 +2,9 @@ package com.xxx.server.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.xxx.server.pojo.AdminRole;
+import com.xxx.server.pojo.RespBean;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * <p>
@@ -12,6 +15,5 @@ import com.xxx.server.pojo.AdminRole;
  * @since 2022-03-15
  */
 public interface IAdminRoleService extends IService<AdminRole> {
-    @Override
-    boolean saveOrUpdate(AdminRole entity);
+
 }
