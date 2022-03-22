@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -26,9 +27,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private AdminMapper adminMapper;
     @Autowired
-    private  RestAuthorizationEntryPoint restAuthorizationEntryPoint;
+    private RestAuthorizationEntryPoint restAuthorizationEntryPoint;
     @Autowired
-    private  RestfulAccessDeniedHandler restfulAccessDeniedHandler;
+    private RestfulAccessDeniedHandler restfulAccessDeniedHandler;
+
     @Override
     //
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
@@ -44,10 +46,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
-                //允许登录访问
-                .antMatchers("/login","/logout")
-                .permitAll()
-                //除了上面，所有请求都要求认证
+
+                //所有请求都要求认证
                 .anyRequest()
                 .authenticated()
                 .and()
@@ -60,6 +60,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.exceptionHandling()
                 .accessDeniedHandler(restfulAccessDeniedHandler)
                 .authenticationEntryPoint(restAuthorizationEntryPoint);
+    }
+
+    @Override
+    public void configure(WebSecurity web) throws Exception {
+        web.ignoring().antMatchers(
+                "/login",
+                "/logout",
+                "/css/**",
+                "/js/**",
+                "/index.html",
+                "/favicon.ico",
+                "/doc.html",
+                "/webjars/**",
+                "/swagger-resources/**",
+                "/v2/api-docs/**"
+        );
     }
 
     @Override
@@ -77,11 +93,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder(){
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
     @Bean
-    public JwtAuthencationTokenFilter jwtAuthencationTokenFilter(){
+    public JwtAuthencationTokenFilter jwtAuthencationTokenFilter() {
         return new JwtAuthencationTokenFilter();
     }
+
+
 }

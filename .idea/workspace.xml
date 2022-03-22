@@ -4,20 +4,67 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8442a93-2e8b-42a1-9863-8be808e21268" name="Changes" comment="JWT token工具类">
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/JwtAuthencationTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/RestAuthorizationEntryPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/RestfulAccessDeniedHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/LoginController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/pojo/AdminLoginParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/pojo/RespBean.java" afterDir="false" />
+    <list default="true" id="b8442a93-2e8b-42a1-9863-8be808e21268" name="Changes" comment="Spring security配置">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_5_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_13_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/Swagger2Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_12_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_12_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_6.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_22.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_22.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_6_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_6_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_29.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/pojo/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/IAdminRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/IAdminRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/IAdminService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/IAdminService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/impl/AdminRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/impl/AdminRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/impl/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/impl/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-generator/yeb-generator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-generator/yeb-generator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/YebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/YebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/JwtTokenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/config/security/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/AdminRoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/AppraiseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/DepartmentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/EmployeeEcController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/EmployeeRemoveController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/EmployeeTrainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/JoblevelController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/MailLogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/MenuController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/MenuRoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/NationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/OplogController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/PoliticsStatusController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/PositionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/RoleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/SalaryAdjustController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/SalaryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/SysMsgContentController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/controller/SysMsgController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/src/main/resources/config/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/src/main/resources/config/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yeb-server/yeb-server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/yeb-server/yeb-server.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +97,10 @@
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -82,7 +133,7 @@
       <recent name="com.xxx.server" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.Test.Test01">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.xxx.generator.CodeGenerator" />
       <module name="yeb-generator" />
@@ -96,8 +147,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Test.Test01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="yeb-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xxx.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.xxx.server" />
+      <option name="MAIN_CLASS_NAME" value="com.xxx.server.Test" />
+      <option name="METHOD_NAME" value="Test01" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="YebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="yeb-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xxx.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xxx.server.YebApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Test.Test01" />
+        <item itemvalue="Spring Boot.YebApplication" />
         <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
@@ -116,7 +198,8 @@
       <workItem from="1647314220193" duration="2016000" />
       <workItem from="1647327235891" duration="991000" />
       <workItem from="1647755288203" duration="13896000" />
-      <workItem from="1647840638518" duration="4106000" />
+      <workItem from="1647840638518" duration="6350000" />
+      <workItem from="1647847087644" duration="7965000" />
     </task>
     <task id="LOCAL-00001" summary="逆向工程">
       <created>1647314060156</created>
@@ -146,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647758998205</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Spring security配置">
+      <created>1647844861100</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1647844861101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +275,8 @@
     <MESSAGE value="逆向工程完成 first commit" />
     <MESSAGE value="逆向工程完成 test commit" />
     <MESSAGE value="JWT token工具类" />
-    <option name="LAST_COMMIT_MESSAGE" value="JWT token工具类" />
+    <MESSAGE value="Spring security配置" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring security配置" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -193,10 +284,13 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/service/IAdminService.java</url>
           <line>31</line>
-          <properties class="com.xxx.server.service.IAdminService" method="getAdminByUserName">
-            <option name="EMULATED" value="true" />
-          </properties>
+          <properties class="com.xxx.server.service.IAdminService" method="getAdminByUserName" />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/yeb-server/src/main/java/com/xxx/server/YebApplication.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
