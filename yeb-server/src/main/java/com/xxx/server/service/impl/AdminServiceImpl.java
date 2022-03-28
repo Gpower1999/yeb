@@ -2,11 +2,12 @@ package com.xxx.server.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.xxx.server.config.security.JwtTokenUtil;
+import com.xxx.server.config.security.component.JwtTokenUtil;
 import com.xxx.server.mapper.AdminMapper;
+import com.xxx.server.mapper.RoleMapper;
 import com.xxx.server.pojo.Admin;
-import com.xxx.server.pojo.Menu;
 import com.xxx.server.pojo.RespBean;
+import com.xxx.server.pojo.Role;
 import com.xxx.server.service.IAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +17,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -41,6 +41,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private PasswordEncoder passwordEncoder;
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
+    @Autowired
+    private RoleMapper roleMapper;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
     /**
@@ -87,5 +89,15 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     public Admin getAdminByUserName(String username) {
         return adminMapper.selectOne(new QueryWrapper<Admin>().eq("username",username)
                 .eq("enabled",true));
+    }
+
+    /**
+     * 根据用户id查询角色列表
+     * @param adminId
+     * @return
+     */
+    @Override
+    public List<Role> getRoles(Integer adminId) {
+        return roleMapper.getRoles(adminId);
     }
 }

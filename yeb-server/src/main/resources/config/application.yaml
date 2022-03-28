@@ -23,6 +23,26 @@ spring:
       #连接超时时间,默认30000(30秒)
       connection-timeout: 30000
       connection-test-query: SELECT 1
+  redis:
+    #超时时间
+    connect-timeout:
+    #服务器地址
+    host: 8.130.100.189
+    #服务器端口
+    port: 6379
+    #数据库
+    database: 0
+    #密码
+    password: 19990410zjp
+    lettuce:
+      pool:
+        #最大连接数, 默认8
+        max-active: 1024
+        #最大连接阻塞等待时间，默认-1
+        max-wait: 10000ms
+        #最小空闲连接
+        min-idle: 5
+
 #mybatis-plus配置
 mybatis-plus:
   #配置Mapper映射文件

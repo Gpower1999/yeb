@@ -14,5 +14,21 @@ import java.util.List;
  * @since 2022-03-15
  */
 public interface IMenuService extends IService<Menu> {
+    /**
+     * 根据id查询菜单列表
+     * @return
+     */
     List<Menu> getMenusByAdminId();
+
+    /**
+     * 根据角色获取菜单列表
+     * @return
+     */
+    List<Menu> getMenusWithRole();
+
+    /**
+     * 查询所有菜单
+     * @return
+     */
+    List<Menu> getAllMenus();
 }
