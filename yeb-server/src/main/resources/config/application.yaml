@@ -1,10 +1,10 @@
 server:
-#  端口
+  #  端口
   port: 8081
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimeZone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/yeb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: root
     hikari:
@@ -42,7 +42,15 @@ spring:
         max-wait: 10000ms
         #最小空闲连接
         min-idle: 5
-
+  rabbitmq:
+    # 用户名
+    username: admin
+    # 密码
+    password: 19990410zjp
+    # 服务器地址
+    host: 121.4.145.102
+    # 端口
+    port: 5672
 #mybatis-plus配置
 mybatis-plus:
   #配置Mapper映射文件
@@ -58,7 +66,7 @@ logging:
     com.xxx.server.mapper: debug
 
 jwt:
-# JWT存储的请求头
+  # JWT存储的请求头
   tokenHeader: Authorization
   # JWT 加解密使用的密钥
   secret: yeb-secret

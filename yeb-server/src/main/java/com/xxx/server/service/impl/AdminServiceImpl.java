@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xxx.server.config.security.component.JwtTokenUtil;
 import com.xxx.server.mapper.AdminMapper;
+import com.xxx.server.mapper.AdminRoleMapper;
 import com.xxx.server.mapper.RoleMapper;
 import com.xxx.server.pojo.Admin;
+import com.xxx.server.pojo.AdminRole;
 import com.xxx.server.pojo.RespBean;
 import com.xxx.server.pojo.Role;
 import com.xxx.server.service.IAdminService;
@@ -43,6 +45,8 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     private JwtTokenUtil jwtTokenUtil;
     @Autowired
     private RoleMapper roleMapper;
+    @Autowired
+    private AdminRoleMapper adminRoleMapper;
     @Value("${jwt.tokenHead}")
     private String tokenHead;
     /**
@@ -99,5 +103,26 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, Admin> implements
     @Override
     public List<Role> getRoles(Integer adminId) {
         return roleMapper.getRoles(adminId);
+    }
+
+    /**
+     * 获取所有操作员
+     * @param keywords
+     * @return
+     */
+    @Override
+    public List<Admin> getAllAdmins(String keywords) {
+        return adminMapper.getAllAdmins(((Admin)SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId(),keywords);
+
+    }
+
+    @Override
+    public RespBean updateAdminRole(Integer adminId, Integer[] rids) {
+        adminRoleMapper.delete(new QueryWrapper<AdminRole>().eq("adminId",adminId));
+        Integer result = adminRoleMapper.addAdminRole(adminId,rids);
+        if (rids.length == result){
+            return RespBean.success("更新成功");
+        }
+        return RespBean.error("更新失败");
     }
 }
